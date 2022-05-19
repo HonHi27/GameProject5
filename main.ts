@@ -117,29 +117,45 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.RockFire, function (sprite, othe
     if (RockStatus) {
         animation.runImageAnimation(
         otherSprite,
-        assets.animation`myAnim9`,
-        200,
+        assets.animation`myAnim10`,
+        100,
         false
         )
         RockStatus = false
     } else {
         otherSprite.destroy()
         tiles.setWallAt(tiles.getTileLocation(14, 46), false)
+        tiles.setTileAt(tiles.getTileLocation(14, 46), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(28, 28), false)
+        tiles.setTileAt(tiles.getTileLocation(28, 28), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(5, 4), false)
+        tiles.setTileAt(tiles.getTileLocation(5, 4), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(7, 5), false)
+        tiles.setTileAt(tiles.getTileLocation(7, 5), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(9, 6), false)
+        tiles.setTileAt(tiles.getTileLocation(9, 6), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(12, 5), false)
+        tiles.setTileAt(tiles.getTileLocation(12, 5), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(17, 6), false)
+        tiles.setTileAt(tiles.getTileLocation(17, 6), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(36, 3), false)
+        tiles.setTileAt(tiles.getTileLocation(36, 3), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(33, 4), false)
+        tiles.setTileAt(tiles.getTileLocation(33, 4), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(31, 3), false)
+        tiles.setTileAt(tiles.getTileLocation(31, 3), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(29, 5), false)
+        tiles.setTileAt(tiles.getTileLocation(29, 5), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(24, 4), false)
+        tiles.setTileAt(tiles.getTileLocation(24, 4), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(27, 5), false)
+        tiles.setTileAt(tiles.getTileLocation(27, 5), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(14, 6), false)
+        tiles.setTileAt(tiles.getTileLocation(14, 6), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(22, 5), false)
+        tiles.setTileAt(tiles.getTileLocation(22, 5), assets.tile`transparency16`)
         tiles.setWallAt(tiles.getTileLocation(20, 6), false)
+        tiles.setTileAt(tiles.getTileLocation(20, 6), assets.tile`transparency16`)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Coin, function (sprite, otherSprite) {
@@ -1001,7 +1017,7 @@ function CreatCoin () {
     }
 }
 function CreateRock () {
-    for (let value of tiles.getTilesByType(assets.tile`myTile36`)) {
+    for (let value of tiles.getTilesByType(assets.tile`myTile39`)) {
         RockFire = sprites.create(assets.image`myImage13`, SpriteKind.RockFire)
         tiles.placeOnTile(RockFire, value)
         tiles.setTileAt(value, assets.tile`transparency16`)
